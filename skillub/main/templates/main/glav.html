@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Главная | Head Hunter</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 10px;
+            background-color: #f9f9f9;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        .intro-text {
+            max-width: 800px;
+            margin: 0 auto 40px;
+            text-align: center;
+        }
+
+        .blocks-container {
+            max-width: 800px;
+            margin: 0 auto;
+            display: grid;
+            gap: 20px;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        }
+
+        .block {
+            background-color: #fff;
+            padding: 20px;
+            border: 1px solid #ccc;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .block-title {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .block-description {
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+
+        .go-to-page-btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+        }
+
+        .go-to-page-btn:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <h1>Добро пожаловать на Head Hunter!</h1>
+
+    <div class="intro-text">
+        <p>Head Hunter – это платформа, созданная для помощи вам в поиске работы и развитии карьеры. Мы предлагаем разнообразные инструменты для саморазвития, включая тесты на профориентацию, курсы повышения квалификации и многое другое. Начните свой путь к успеху прямо сейчас!</p>
+    </div>
+
+    <div class="blocks-container">
+        <div class="block">
+            <p class="block-title">Мой профиль</p>
+            <p class="block-description">Узнайте больше о себе, своих навыках и достижениях.</p>
+            <a href="{% url 'login' %}">Перейти к профилю</a>
+        </div>
+
+        <div class="block">
+            <p class="block-title">Профориентация</p>
+            <p class="block-description">Определитесь с выбором профессии, пройдя наши увлекательные тесты.</p>
+            <a href="{% url 'sovet' %}">Пройти тестирование</a>
+        </div>
+
+        <div class="block">
+            <p class="block-title">Курсы подготовки</p>
+            <p class="block-description">Повышайте свою квалификацию, проходя курсы по различным направлениям.</p>
+            <a href="{% url 'sovet' %}">Посмотреть курсы</a>
+        </div>
+
+        <div class="block">
+            <p class="block-title">Тесты с мемами</p>
+            <p class="block-description">Развлекайтесь и развивайтесь одновременно, проходя тесты с мемами и другими забавными элементами.</p>
+            <a href="{% url 'recept' %}">Пройти тест</a>
+        </div>
+    </div>
+</body>
+</html>

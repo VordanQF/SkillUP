@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Профиль участника</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 10px;
+            background-color: #f9f9f9;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        .profile-container {
+            max-width: 600px;
+            margin: 40px auto 20px;
+            border: 1px solid #ccc;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .profile-info {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .info-label {
+            font-weight: bold;
+            width: 150px;
+        }
+
+        .info-value {
+            width: calc(100% - 160px);
+        }
+
+        .results-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .results-table th,
+        .results-table td {
+            padding: 8px;
+            border: 1px solid #ddd;
+        }
+
+        .results-table th {
+            background-color: #f0f0f0;
+        }
+
+        .back-button {
+            display: block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            text-align: center;
+        }
+
+        .back-button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <h1>Профиль участника</h1>
+
+    <div class="profile-container">
+        <div class="profile-info">
+            <span class="info-label">Имя:</span>
+            <span class="info-value">Иван</span>
+        </div>
+        <div class="profile-info">
+            <span class="info-label">Фамилия:</span>
+            <span class="info-value">Иванов</span>
+        </div>
+        <div class="profile-info">
+            <span class="info-label">Возраст:</span>
+            <span class="info-value">30 лет</span>
+        </div>
+        <div class="profile-info">
+            <span class="info-label">Стаж:</span>
+            <span class="info-value">7 лет</span>
+        </div>
+        <div class="profile-info">
+            <span class="info-label">Результаты проф. ориентации:</span>
+            <table class="results-table">
+                <tr>
+                    <th>Тест</th>
+                    <th>Результат</th>
+                </tr>
+                <tr>
+                    <td>Тест на аналитические способности</td>
+                    <td>90/100</td>
+                </tr>
+                <tr>
+                    <td>Тест на коммуникативные навыки</td>
+                    <td>85/100</td>
+                </tr>
+                <tr>
+                    <td>Тест на лидерские качества</td>
+                    <td>75/100</td>
+                </tr>
+            </table>
+        </div>
+        <div class="profile-info">
+            <span class="info-label">Баллы на сайте:</span>
+            <span class="info-value">1200</span>
+        </div>
+
+        <!-- Кнопка Назад -->
+        <a href="{% url 'home' %}" class="back-button">Назад в главное меню</a>
+    </div>
+</body>
+</html>

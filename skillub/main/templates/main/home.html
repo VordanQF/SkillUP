@@ -1,48 +1,97 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="utf-8">
+<head>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Главная страница</title>
-    <link rel="stylesheet" href="./styles/style.css">
+    <title>Здоровое Питание</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        header {
+            text-align: center;
+            background-color: #008080;
+            color: white;
+            padding: 10px;
+        }
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #333;
+        }
+        nav li {
+            float: left;
+        }
+        nav a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+        nav a:hover {
+            background-color: #111;
+        }
+        article {
+            background-color: white;
+            padding: 20px;
+            margin-top: 30px;
+        }
+        footer {
+            text-align: center;
+            background-color: #008080;
+            color: white;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
 
-    <meta property="og:title" content="Заголовок страницы в OG">
-    <meta property="og:description" content="Описание страницы в OG">
-    <meta property="og:image" content="https://hh.ru/">
-    <meta property="og:url" content="https://career.hh.ru/courses">
-  </head>
-  <body>
-    <header>
-      <h1>Заголовок</h1>
-      <p>описание заголовка</p>
-      <nav>
-        <ul>
-          <li><a href="index.html">Эта страница</a></li>
-          <li><a href="catalog.html">Другая страница</a></li>
-        </ul>
-      </nav>
-    </header>
-    <main>
-      <article>
-        <section>
-          <h2>Первая секция</h2>
-          <p>Описание</p>
-          <img src="images/image.png" alt="котик">
-          <p>Описание2.</p>
-        </section>
-        <section>
-          <h2>Вторая секция</h2>
-          <p>Про меня</p>
-        </section>
-        <section>
-          <h2>третья секция</h2>
-          <p>Про вас.</p>
-        </section>
-      </article>
-    </main>
-    <footer>
-      <p>автор</p>
-    </footer>
-    <!-- сюда можно подключить jquery <script src="scripts/app.js" defer></script> -->
-  </body>
+<header>
+    <h1>Здоровое Питание</h1>
+</header>
+
+<nav>
+    <ul>
+        <li><a href="{% url 'glav' %}">Главная</a></li>
+        <li><a href="{% url 'recept' %}">Рецепты</a></li>
+        <li><a href="{% url 'sovet' %}">Советы</a></li>
+        <li><a href="{% url 'about' %}">О нас</a></li>
+    </ul>
+</nav>
+
+<article>
+    <h2>Что такое здоровое питание?</h2>
+    <p>Здоровое питание – это сбалансированный рацион, который обеспечивает организм всеми необходимыми питательными веществами для поддержания здоровья и предотвращения заболеваний. Это включает в себя употребление разнообразных продуктов, таких как фрукты, овощи, цельнозерновые продукты, белки и полезные жиры.</p>
+
+    <h2>Преимущества здорового питания</h2>
+    <ul>
+        <li>Улучшение общего самочувствия</li>
+        <li>Повышение уровня энергии</li>
+        <li>Поддержка здорового веса</li>
+        <li>Снижение риска хронических заболеваний</li>
+    </ul>
+
+    <h2>Как начать питаться правильно?</h2>
+    <ol>
+        <li>Планируйте свои приемы пищи заранее</li>
+        <li>Включайте больше фруктов и овощей в свой рацион</li>
+        <li>Выбирайте здоровые источники белка, такие как рыба, курица и бобовые</li>
+        <li>Ограничьте потребление сахара и насыщенных жиров</li>
+    </ol>
+</article>
+
+<footer>
+    © 2023 Здоровое Питание
+</footer>
+
+</body>
 </html>
